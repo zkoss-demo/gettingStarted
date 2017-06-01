@@ -1,17 +1,13 @@
 package org.zkoss.tutorial;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.io.*;
+import java.net.*;
 import java.util.List;
 
 import com.google.api.client.http.javanet.NetHttpTransport;
-import com.google.api.client.json.jackson.JacksonFactory;
+import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.customsearch.Customsearch;
-import com.google.api.services.customsearch.CustomsearchRequest;
-import com.google.api.services.customsearch.model.Result;
-import com.google.api.services.customsearch.model.Search;
+import com.google.api.services.customsearch.model.*;
 
 public class CustomSearchService {
 
@@ -42,7 +38,7 @@ public class CustomSearchService {
 	}
 
 	public List<Result> search(String keyword){
-		Customsearch customsearch = new Customsearch(new NetHttpTransport(), new JacksonFactory());
+		Customsearch customsearch = new Customsearch(new NetHttpTransport(), JacksonFactory.getDefaultInstance(), null);
 		List<Result> resultList = null;
 		try {
 			Customsearch.Cse.List list = customsearch.cse().list(keyword);
