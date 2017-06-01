@@ -3,7 +3,7 @@
 	<hbox align="center">
 		Keyword:
 		<textbox value="@save(vm.keyword)" />
-		<button label="Search" image="/img/search.png" onClick="@command('search')" />
+		<button label="Search" iconSclass="z-icon-search" onClick="@command('search')" />
 	</hbox>
 	<listbox height="160px" model="@load(vm.carList)" emptyMessage="No car found in the result"
 	selectedItem="@save(vm.selectedCar)">
