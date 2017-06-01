@@ -4,7 +4,7 @@
  -->
 <zk>
 	<window border="normal" width="400px" style="margin-top:20px;margin-left:20px;" title="Welcome! New User">
-		<grid >
+		<grid height="100%">
 			<auxhead>
 				<auxheader colspan="2" label="Registration Form" style="font-size:16px" image="/images/picture.png"/>
 			</auxhead>
@@ -39,5 +39,6 @@
 				</row>
 			</rows>
 		</grid>
+    	<custom-attributes org.zkoss.zul.image.preload="true"/>
 	</window>
 </zk>
