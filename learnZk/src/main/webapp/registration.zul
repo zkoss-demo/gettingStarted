@@ -1,5 +1,10 @@
 <zk>
-	<window border="normal" width="400px" style="margin-top:20px;margin-left:20px;" title="Welcome! New User"
+	<style>
+		.z-button i {
+			font-size: 14px;
+		}
+	</style>
+	<window border="normal" width="600px" style="margin:0px auto;" title="Welcome! New User"
 	apply="org.zkoss.simple.RegistrationComposer">
 		<grid id="formGrid" hflex="1" ctrlKeys="^h" >
 			<auxhead>

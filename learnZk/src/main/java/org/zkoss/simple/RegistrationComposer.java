@@ -36,10 +36,10 @@ public class RegistrationComposer extends SelectorComposer<Window> {
 	public void changeSubmitStatus(){
 		if (acceptTermCheckbox.isChecked()){
 			submitButton.setDisabled(false);
-			submitButton.setImage("/images/submit.png");
+			submitButton.setIconSclass("z-icon-check");
 		}else{
 			submitButton.setDisabled(true);
-			submitButton.setImage("");
+			submitButton.setIconSclass("");
 		}
 	}
 	
