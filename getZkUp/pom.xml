@@ -3,11 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>8.0.5-Eval</version>
+	<version>8.5.0-Eval</version>
 	<properties>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
 	</properties>
 	<packaging>war</packaging>
 	<name>The getzkup Project</name>
@@ -54,12 +56,11 @@
 			<version>${commons-io}</version>
 		</dependency>
 		
-		<!-- ZK 5 breeze theme
+		<!-- ZK previous default theme - breeze
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>breeze</artifactId>
-			<version>${zk.version}</version>
-			<optional>true</optional>
+			<version>${project.version}</version>
 		</dependency>
 		 -->
 	</dependencies>
@@ -68,32 +69,19 @@
 		<plugins>
 			<!-- Run with Jetty -->
 			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
+				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>7.6.8.v20121106</version>
+				<version>9.2.22.v20170606</version>
 				<configuration>
 					<webAppConfig>
 						<contextPath>/${project.artifactId}</contextPath>
 						<allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
+						<!-- no need to scan anything as we're using servlet 2.5 to reduce start-up time-->
+						<webInfIncludeJarPattern>^$</webInfIncludeJarPattern>
+						<containerIncludeJarPattern>^$</containerIncludeJarPattern>
 					</webAppConfig>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 				</configuration>
-			</plugin>
-			<!-- Compile java -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
-			</plugin>
-			<!-- Build war -->
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<groupId>org.apache.maven.plugins</groupId>
-				<version>2.1.1</version>
 			</plugin>
 			<!-- Pack zips -->
 			<plugin>
@@ -119,8 +107,8 @@
 		</plugins>
 	</build>
 	<description>* This is the example application for ZK &quot;Getting Started&quot; articles:
-	- Get ZK Up and Running with MVC
-	- Get ZK Up and Running with MVVM
+	- Get ZK Up and Running with MVC (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVC)
+	- Get ZK Up and Running with MVVM (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVVM)
 * Project version follows the ZK version it depends.
 * Release Procedure:
 	1. use Maven &quot;package&quot;
