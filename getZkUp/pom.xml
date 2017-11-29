@@ -106,14 +106,21 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description>* This is the example application for ZK &quot;Getting Started&quot; articles:
+	<description># This is the example application for ZK &quot;Getting Started&quot; articles:
 	- Get ZK Up and Running with MVC (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVC)
 	- Get ZK Up and Running with MVVM (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVVM)
-* Project version follows the ZK version it depends.
-* Release Procedure:
+# Run the project
+## no maven installed
+* ./mvnw jetty:run
+https://github.com/takari/maven-wrapper
+## maven installed
+* mvn jetty:run
+
+# Project version follows the ZK version it depends.
+# Release Procedure:
 	1. use Maven &quot;package&quot;
 	2. upload to github release with tag
-* Tag naming rule:
+# Tag naming rule:
 	[ARTIFACT-ID]-[ZK-VERSION]
 Because normally we only modify source code if it's deprecated or incompatible with current ZK version.</description>
 </project>
