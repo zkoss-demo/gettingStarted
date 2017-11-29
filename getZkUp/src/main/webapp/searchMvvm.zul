@@ -20,13 +20,13 @@
 			</listitem>
 		</template>
 	</listbox>
-	<hbox style="margin-top:20px">
+	<hlayout style="margin-top:20px" width="100%">
 		<image width="250px" src="@load(vm.selectedCar.preview)" />
-		<vbox>
+		<vlayout hflex="1">
 			<label value="@load(vm.selectedCar.model)" />
 			<label value="@load(vm.selectedCar.make)" />
 			<label value="@load(vm.selectedCar.price)" />
 			<label value="@load(vm.selectedCar.description)" />
-		</vbox>
-	</hbox>
+		</vlayout>
+	</hlayout>
 </window>

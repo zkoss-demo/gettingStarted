@@ -19,13 +19,13 @@
 			</listitem>
 		</template>
 	</listbox>
-	<hbox style="margin-top:20px">
+	<hlayout style="margin-top:20px" width="100%">
 		<image id="previewImage" width="250px" />
-		<vbox>
+		<vlayout hflex="1">
 			<label id="modelLabel" />
 			<label id="makeLabel" />
 			<label id="priceLabel" />
 			<label id="descriptionLabel" />
-		</vbox>
-	</hbox>
+		</vlayout>
+	</hlayout>
 </window>
