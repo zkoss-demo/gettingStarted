@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>8.5.0-Eval</version>
+	<version>9.0.0-Eval</version>
 	<properties>
 		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
@@ -24,19 +24,19 @@
 		<repository>
 			<id>ZK CE</id>
 			<name>ZK CE Repository</name>
-			<url>http://mavensync.zkoss.org/maven2</url>
+			<url>https://mavensync.zkoss.org/maven2</url>
 		</repository>
 		<repository>
 			<id>ZK EVAL</id>
       		<name>ZK Evaluation Repository</name>
-			<url>http://mavensync.zkoss.org/eval</url>
+			<url>https://mavensync.zkoss.org/eval</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>zkmaven</id>
 			<name>ZK Maven Plugin Repository</name>
-			<url>http://mavensync.zkoss.org/maven2/</url>
+			<url>https://mavensync.zkoss.org/maven2/</url>
 		</pluginRepository>
 	</pluginRepositories>
 	<dependencies>
