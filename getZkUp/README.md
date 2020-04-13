@@ -14,3 +14,7 @@ Run the Maven wrapper below which will download everything needed for you during
 * Windows
 
 `mvnw.cmd jetty:run`
+
+Then visit  http://localhost:8080/getzkup/ with your browser.
+
+You can press `CtrL + c` to step the jetty server.
