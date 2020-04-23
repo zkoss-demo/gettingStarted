@@ -5,11 +5,10 @@
 	<artifactId>getzkup</artifactId>
 	<version>9.0.0-Eval</version>
 	<properties>
-		<commons-io>1.3.1</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<packaging>war</packaging>
 	<name>The getzkup Project</name>
@@ -20,6 +19,17 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.zkoss.zk</groupId>
+				<artifactId>zk-bom</artifactId>
+				<version>9.0.1-Eval</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<repositories>
 		<repository>
 			<id>ZK CE</id>
@@ -42,25 +52,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkbind</artifactId>
-			<version>${project.version}</version>
+			<artifactId>zkmax</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zul</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>${commons-io}</version>
-		</dependency>
-		
+
 		<!-- ZK previous default theme - breeze
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
 			<artifactId>breeze</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		 -->
 	</dependencies>
