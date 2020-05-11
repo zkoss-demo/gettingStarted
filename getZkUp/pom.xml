@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.0.1-Eval</version>
+	<version>9.0.1.2-Eval</version>
 	<properties>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
@@ -24,7 +24,7 @@
 			<dependency>
 				<groupId>org.zkoss.zk</groupId>
 				<artifactId>zk-bom</artifactId>
-				<version>9.0.1-Eval</version>
+				<version>${project.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -53,6 +53,8 @@
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkmax</artifactId>
+<!--  the version depends on your zk-bom if you use it -->
+<!--			<version>${project.version}</version>-->
 		</dependency>
 
 		<!-- ZK previous default theme - breeze
