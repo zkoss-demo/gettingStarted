@@ -37,7 +37,7 @@ public class SearchController extends SelectorComposer<Component> {
         carListbox.setModel(dataModel);
     }
 
-    @Listen("onClick = #searchButton")
+    @Listen("onClick = #searchButton; onOK = window")
     public void search() {
         String keyword = keywordBox.getValue();
         dataModel.clear();
