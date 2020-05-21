@@ -49,38 +49,14 @@ public class RegistrationSpringComposer extends SelectorComposer<Window> {
 		submitButton.setDisabled(true);
 	}
 	
-	// sample method for 3rd party integration
-	@Listen("onClick = #submitButton")
-	public void register(){
-		
-		User newUser = new User();
-		newUser.setName(nameBox.getValue());
-		if (genderRadio.getSelectedIndex()==0){
-			newUser.setMale(true);
-		}else{
-			newUser.setMale(false);
-		}
-		newUser.setBirthday(birthdayBox.getValue());
 
-		if (!validate(newUser)){
-			logger.debug("user validation failed");
-			return;
-		}
-		
-		legacyRegister.add(newUser);
-		
-		Messagebox.show("Congratulation! "+nameBox.getValue()+". Your registration is success.");
-		reset();
-	}
-	
-	
 	@Listen("onClick = #submitButton")
 	public void submit(){
 		if (!validateInput()){
 			logger.debug("input validation failed");
 			return;
 		}
-		
+
 		User newUser = new User();
 		newUser.setName(nameBox.getValue());
 		if (genderRadio.getSelectedIndex()==0){
@@ -90,7 +66,8 @@ public class RegistrationSpringComposer extends SelectorComposer<Window> {
 		}
 		newUser.setBirthday(birthdayBox.getValue());
 		registrationDao.add(newUser);
-		
+//		legacyRegister.add(newUser);
+
 		Messagebox.show("Congratulation! "+nameBox.getValue()+". Your registration is success.");
 		reset();
 	}

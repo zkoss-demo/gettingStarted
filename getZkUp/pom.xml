@@ -5,6 +5,7 @@
 	<artifactId>getzkup</artifactId>
 	<version>9.0.1.2-Eval</version>
 	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -71,6 +72,11 @@
 			<artifactId>breeze</artifactId>
 		</dependency>
 		 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
