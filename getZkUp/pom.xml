@@ -11,7 +11,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 	<packaging>war</packaging>
-	<name>The getzkup Project</name>
+	<name>The Get ZK Up and Running Project</name>
 	<licenses>
 		<license>
 			<name>GNU LESSER GENERAL PUBLIC LICENSE, Version 3</name>
@@ -79,15 +79,12 @@
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.2.22.v20170606</version>
+				<version>9.4.27.v20200227</version>
 				<configuration>
+					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<webAppConfig>
 						<contextPath>/${project.artifactId}</contextPath>
-						<!-- no need to scan anything as we're using servlet 2.5 to reduce start-up time-->
-						<webInfIncludeJarPattern>^$</webInfIncludeJarPattern>
-						<containerIncludeJarPattern>^$</containerIncludeJarPattern>
 					</webAppConfig>
-					<scanIntervalSeconds>5</scanIntervalSeconds>
 				</configuration>
 			</plugin>
 			<!-- Pack zips -->
