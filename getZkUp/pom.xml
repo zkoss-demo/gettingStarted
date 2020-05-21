@@ -56,7 +56,15 @@
 <!--  the version depends on your zk-bom if you use it -->
 <!--			<version>${project.version}</version>-->
 		</dependency>
-
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkplus</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-customsearch</artifactId>
+			<version>v1-rev54-1.22.0</version>
+		</dependency>
 		<!-- ZK previous default theme - breeze
 		<dependency>
 			<groupId>org.zkoss.theme</groupId>
