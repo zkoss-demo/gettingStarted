@@ -2,9 +2,9 @@
 This page is simply for code demo. It cannot run correctly because there is no Spring beans configured.  
  -->
 <zk>
-	<window border="normal" width="400px" style="margin-top:20px;margin-left:20px;" title="Welcome! New User"
+	<window border="normal" hflex="min" style="margin-top:20px;margin-left:20px;" title="Welcome! New User"
 	apply="org.zkoss.simple.RegistrationSpringComposer">
-		<grid hflex="1">
+		<grid hflex="min">
 			<auxhead>
 				<auxheader colspan="2" label="Registration Form" style="font-size:16px" image="/images/picture.png"/>
 			</auxhead>
