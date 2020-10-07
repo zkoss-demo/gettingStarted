@@ -1,12 +1,7 @@
 <zk>
-	<style>
-		.z-button i {
-			font-size: 14px;
-		}
-	</style>
 	<window border="normal" hflex="min" style="margin:0px auto;" title="Welcome! New User"
 	apply="org.zkoss.simple.RegistrationComposer">
-		<grid id="formGrid" hflex="min" ctrlKeys="^h" >
+		<grid id="formGrid" hflex="min" ctrlKeys="^h" vflex="min">
 			<auxhead>
 				<auxheader colspan="2" label="Registration Form" style="font-size:16px" image="/images/picture.png"/>
 			</auxhead>
