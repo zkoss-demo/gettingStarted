@@ -6,7 +6,7 @@
 		<button label="Search" image="/img/search.png" onClick="@command('search')" />
 	</div>
 	<listbox model="@init(vm.carList)" emptyMessage="No car found in the result" rows="4"
-	selectedItem="@save(vm.selectedCar)" style="padding:3px;" multiple="true">
+	selectedItem="@save(vm.selectedCar)">
 		<listhead sizable="true">
 			<listheader label="Model" />
 			<listheader label="Make" />

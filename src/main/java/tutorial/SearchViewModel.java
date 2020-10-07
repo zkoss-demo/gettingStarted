@@ -4,14 +4,16 @@ import java.util.List;
 import org.zkoss.bind.annotation.*;
 import org.zkoss.zul.ListModelList;
 
+/**
+ * Suggest using ZK {@link org.zkoss.zul.ListModel} implementation as a component's model.
+ */
 public class SearchViewModel {
 	
 	private String keyword;
 	private List<Car> carList = new ListModelList<Car>();
 	private Car selectedCar;
-	
-	private CarService carService = new CarServiceImpl();
 
+	private CarService carService = new CarServiceImpl(); //this could be any of your service class
 
 	@Command
 	public void search(){
