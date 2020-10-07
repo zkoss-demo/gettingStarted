@@ -3,7 +3,16 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.0.1.2-Eval</version>
+	<version>9.5.0-Eval</version>
+	<description>
+		# Project version follows the ZK version it depends.
+		# Release Procedure:
+		1. use Maven &quot;package&quot;
+		2. upload to github release with tag
+		# Tag naming rule:
+		[ARTIFACT-ID]-[ZK-VERSION]
+		Because normally we only modify source code if it's deprecated or incompatible with current ZK version.
+	</description>
 	<properties>
 		<spring.version>3.0.5.RELEASE</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
@@ -42,6 +51,10 @@
       		<name>ZK Evaluation Repository</name>
 			<url>https://mavensync.zkoss.org/eval</url>
 		</repository>
+		<repository>
+			<id>ZK EE</id>
+			<url>https://maven.zkoss.org/repo/zk/ee</url>
+		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -60,6 +73,7 @@
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkplus</artifactId>
+<!--			<version>${project.version}</version>-->
 		</dependency>
 		<dependency>
 			<groupId>com.google.apis</groupId>
@@ -116,21 +130,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	<description># This is the example application for ZK &quot;Getting Started&quot; articles:
-	- Get ZK Up and Running with MVC (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVC)
-	- Get ZK Up and Running with MVVM (https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVVM)
-# Run the project
-## no maven installed
-* ./mvnw jetty:run
-https://github.com/takari/maven-wrapper
-## maven installed
-* mvn jetty:run
-
-# Project version follows the ZK version it depends.
-# Release Procedure:
-	1. use Maven &quot;package&quot;
-	2. upload to github release with tag
-# Tag naming rule:
-	[ARTIFACT-ID]-[ZK-VERSION]
-Because normally we only modify source code if it's deprecated or incompatible with current ZK version.</description>
 </project>
