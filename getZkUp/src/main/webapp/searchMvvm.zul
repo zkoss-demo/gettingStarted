@@ -5,9 +5,9 @@
 		<textbox value="@save(vm.keyword)" />
 		<button label="Search" image="/img/search.png" onClick="@command('search')" />
 	</div>
-	<listbox model="@init(vm.carList)" emptyMessage="No car found in the result"
-	selectedItem="@save(vm.selectedCar)">
-		<listhead>
+	<listbox model="@init(vm.carList)" emptyMessage="No car found in the result" rows="4"
+	selectedItem="@save(vm.selectedCar)" style="padding:3px;" multiple="true">
+		<listhead sizable="true">
 			<listheader label="Model" />
 			<listheader label="Make" />
 			<listheader label="Price" width="20%"/>
