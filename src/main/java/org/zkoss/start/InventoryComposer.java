@@ -14,6 +14,7 @@ package org.zkoss.start;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.*;
+import org.zkoss.zk.ui.util.Notification;
 import org.zkoss.zul.*;
 
 /**
@@ -108,5 +109,10 @@ public class InventoryComposer extends SelectorComposer<Component>{
 	@Listen("onClick = menuitem[label='Filter']")
 	public void showFilterArea(){
 		filterArea.setVisible(true);
+	}
+
+	@Listen("onClick = menuitem[label='Add'], menuitem[label='About']")
+	public void noOp(){
+		Notification.show("not implemented");
 	}
 }
