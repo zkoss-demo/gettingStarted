@@ -4,17 +4,18 @@ This page is simply for code demo. It cannot run correctly because there is no S
 <zk>
 	<window border="normal" hflex="min" style="margin-top:20px;margin-left:20px;" title="Welcome! New User"
 	apply="org.zkoss.simple.RegistrationSpringComposer">
+		<custom-attributes org.zkoss.zul.image.preload="true"/>
 		<grid hflex="min" vflex="min">
 			<auxhead>
 				<auxheader colspan="2" label="Registration Form" style="font-size:16px" image="/images/picture.png"/>
 			</auxhead>
 			<columns visible="false">
-				<column/>
+				<column hflex="min" />
 				<column/>
 			</columns>
 			<rows >
 				<row >
-					User Name <textbox id="nameBox" hflex="1" constraint="no empty"/>
+					UserName: <textbox id="nameBox" hflex="1" constraint="no empty"/>
 				</row>
 				<row>
 					Gender:
