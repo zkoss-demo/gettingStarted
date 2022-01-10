@@ -13,9 +13,9 @@
 		</listhead>
 		<template name="model">
 			<listitem>
-				<listcell label="${each.model}"></listcell>
-				<listcell label="${each.make}"></listcell>
-				<listcell>$<label value="${each.price}" /></listcell>
+				<listcell label="${each.model}"/>
+				<listcell label="${each.make}"/>
+				<listcell label="${('$'+=each.price)}"/>
 			</listitem>
 		</template>
 	</listbox>
