@@ -5,7 +5,7 @@
 		<textbox id="keywordBox" />
 		<button id="searchButton" label="Search" image="/img/search.png" />
 	</div>
-	<listbox id="carListbox"  emptyMessage="No car found in the result" rows="5">
+	<listbox id="carListbox" emptyMessage="No car found in the result" rows="5">
 		<listhead>
 			<listheader label="Model" />
 			<listheader label="Make" />
