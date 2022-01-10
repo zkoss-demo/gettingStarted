@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.5.0-Eval</version>
+	<version>9.6.0.1-Eval</version>
 	<description>
 		# Project version follows the ZK version it depends.
 		# Release Procedure:
-		1. use Maven &quot;package&quot;
+		1. run Maven goal &quot;clean package&quot;
 		2. upload to github release with tag
 		# Tag naming rule:
 		[ARTIFACT-ID]-[ZK-VERSION]
