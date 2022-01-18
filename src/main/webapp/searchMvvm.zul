@@ -16,7 +16,7 @@
 			<listitem>
 				<listcell label="@init(each.model)"></listcell>
 				<listcell label="@init(each.make)"></listcell>
-				<listcell><label value="@init(('$'+=each.price))" /></listcell>
+				<listcell label="@init(('$'+=each.price))" />
 			</listitem>
 		</template>
 	</listbox>
