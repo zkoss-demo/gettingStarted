@@ -2,7 +2,7 @@
 	viewModel="@id('vm') @init('tutorial.SearchViewModel')">
 	Keyword:
 	<textbox value="@save(vm.keyword)" />
-	<button label="Search" image="/img/search.png" onClick="@command('search')" style="margin: 0 0 5px 5px"/>
+	<button label="Search" iconSclass="z-icon-search" onClick="@command('search')" style="margin: 0 0 5px 5px"/>
 	<listbox model="@init(vm.carList)" emptyMessage="No car found in the result" rows="5"
 	selectedItem="@save(vm.selectedCar)">
 		<listhead sizable="true">
