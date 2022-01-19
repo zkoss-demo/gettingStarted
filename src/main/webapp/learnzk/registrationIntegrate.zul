@@ -4,10 +4,9 @@ This page is simply for code demo. It cannot run correctly because there is no S
 <zk>
 	<window border="normal" hflex="min" style="margin-top:20px;margin-left:20px;" title="Welcome! New User"
 	apply="org.zkoss.simple.RegistrationSpringComposer">
-		<custom-attributes org.zkoss.zul.image.preload="true"/>
 		<grid hflex="min" vflex="min">
 			<auxhead>
-				<auxheader colspan="2" label="Registration Form" style="font-size:16px" image="/images/picture.png"/>
+				<auxheader colspan="2" label="Registration Form" style="font-size:16px" iconSclass="z-icon-user-circle-o"/>
 			</auxhead>
 			<columns visible="false">
 				<column hflex="min" />
@@ -20,8 +19,8 @@ This page is simply for code demo. It cannot run correctly because there is no S
 				<row>
 					Gender:
 					<radiogroup id="genderRadio">
-						<radio id="maleRadio" label="Male" value="male" image="/images/male.png" checked="true"/>
-						<radio label="Female" value="female" image="/images/female.png"/>
+						<radio id="maleRadio" label="Male" value="male" iconSclass="z-icon-male" checked="true"/>
+						<radio label="Female" value="female" iconSclass="z-icon-female"/>
 					</radiogroup>
 				</row>
 				<row >
