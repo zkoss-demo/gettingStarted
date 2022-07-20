@@ -1,5 +1,7 @@
-<zk>
-<window border="normal" title="Get ZK Up and Running">
+<?script src="dom-to-image.min.js"?>
+<zk xmlns:c="client/attribute">
+<window border="normal" title="dom o image">
+	<button label="capture" c:onclick="captureScreen()"/>
 	<vlayout>
 		<a href="hello.zul">hello.zul</a>
 		<a href="search.zul">search.zul</a>
@@ -7,4 +9,13 @@
 		<a href="searchMvvm.zul">searchMvvm.zul</a>
 	</vlayout>
 </window>
+
+	<script>
+		function captureScreen() {
+			const screenshotTarget = document.body;
+
+			domtoimage.toBlob(screenshotTarget).then(function (blob) { window.saveAs(blob, 'my-node.png'); });
+			alert("alert box!!");
+		}
+	</script>
 </zk>

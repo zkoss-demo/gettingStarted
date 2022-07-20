@@ -1,8 +1,5 @@
 # Overview
-This is the example application for ZK "Getting Started" articles:
-- [Learn ZK in 10 Minutes](https://www.zkoss.org/wiki/ZK_Getting_Started/Learn_ZK_in_10_Minutes)
-- [Get ZK Up and Running with MVC](https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVC)
-- [Get ZK Up and Running with MVVM](https://www.zkoss.org/wiki/ZK_Getting_Started/Get_ZK_Up_and_Running_with_MVVM)
+This is the example application for ZK + [dom-to-image](https://github.com/tsayen/dom-to-image).
 
 # How to Run 
 
