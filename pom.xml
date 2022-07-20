@@ -14,7 +14,6 @@
 		Because normally we only modify source code if it's deprecated or incompatible with current ZK version.
 	</description>
 	<properties>
-		<spring.version>4.3.30.RELEASE</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -69,27 +68,6 @@
 			<artifactId>zul</artifactId>
 <!--  the version depends on zk-bom -->
 <!--			<version>${project.version}</version>-->
-		</dependency>
-		<dependency>
-			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkplus</artifactId>
-<!--			<version>${project.version}</version>-->
-		</dependency>
-		<dependency>
-			<groupId>com.google.apis</groupId>
-			<artifactId>google-api-services-customsearch</artifactId>
-			<version>v1-rev54-1.22.0</version>
-		</dependency>
-		<!-- ZK previous default theme - breeze
-		<dependency>
-			<groupId>org.zkoss.theme</groupId>
-			<artifactId>breeze</artifactId>
-		</dependency>
-		 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
 		</dependency>
 	</dependencies>
 	<build>
