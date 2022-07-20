@@ -1,4 +1,5 @@
 <?script src="dom-to-image.min.js"?>
+<?script src="FileSaver.min.js"?>
 <zk xmlns:c="client/attribute">
 <window border="normal" title="dom o image">
 	<button label="capture" c:onclick="captureScreen()"/>
