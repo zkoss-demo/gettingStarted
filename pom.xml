@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.6.1-Eval</version>
+	<version>9.6.2-Eval</version>
 	<description>
 		# Project version follows the ZK version it depends.
 		# Release Procedure:
@@ -66,8 +66,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
-			<artifactId>zkmax</artifactId>
-<!--  the version depends on your zk-bom if you use it -->
+			<artifactId>zul</artifactId>
+<!--  the version depends on zk-bom -->
 <!--			<version>${project.version}</version>-->
 		</dependency>
 		<dependency>

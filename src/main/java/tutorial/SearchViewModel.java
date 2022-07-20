@@ -1,7 +1,7 @@
 package tutorial;
 
 import java.util.List;
-import org.zkoss.bind.annotation.*;
+import org.zkoss.zk.ui.annotation.Command;
 import org.zkoss.zul.ListModelList;
 
 /**
