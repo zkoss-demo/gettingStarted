@@ -12,13 +12,14 @@
 		# Tag naming rule:
 		[ARTIFACT-ID]-[ZK-VERSION]
 		Because normally we only modify source code if it's deprecated or incompatible with current ZK version.
+		required to run with Java 17 for Spring 6
 	</description>
 	<properties>
 		<spring.version>6.0.2</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.9</maven.compiler.source>
+		<maven.compiler.target>1.9</maven.compiler.target>
 	</properties>
 	<packaging>war</packaging>
 	<name>The Get ZK Up and Running Project</name>
@@ -100,7 +101,7 @@
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
-			<!-- Run with Jetty -->
+			<!-- https://www.eclipse.org/jetty/documentation/jetty-11/programming-guide/index.html#common-configuration -->
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
