@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.6.3-Eval</version>
+	<version>9.6.3-jakarta-Eval</version>
 	<description>
 		# Project version follows the ZK version it depends.
 		# Release Procedure:
@@ -14,7 +14,7 @@
 		Because normally we only modify source code if it's deprecated or incompatible with current ZK version.
 	</description>
 	<properties>
-		<spring.version>4.3.30.RELEASE</spring.version>
+		<spring.version>6.0.2</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -91,6 +91,11 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
@@ -99,12 +104,11 @@
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.27.v20200227</version>
+				<version>11.0.12</version>
 				<configuration>
-					<scanIntervalSeconds>5</scanIntervalSeconds>
-					<webAppConfig>
-						<contextPath>/${project.artifactId}</contextPath>
-					</webAppConfig>
+					<webApp>
+						<contextPath>/${artifactId}</contextPath>
+					</webApp>
 				</configuration>
 			</plugin>
 			<!-- Pack zips -->
