@@ -1,0 +1,9 @@
+version: "3"
+services:
+# https://hub.docker.com/_/jetty
+  jetty:
+    image: jetty:9.4.50-jdk8
+    volumes:
+      - ./target/getzkup.war:/var/lib/jetty/webapps/getzkup.war
+    ports:
+      - 8080:8080
