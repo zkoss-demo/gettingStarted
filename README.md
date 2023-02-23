@@ -24,7 +24,11 @@ Run the Maven wrapper below which will download everything needed for you during
 You can press `Ctrl + c` to stop the jetty server.
 
 ## With Docker
-1. package the application as a war with Maven by `mvn clean package`
-2. run `docker-compose up`
+Assuming you have installed Docker.
+1. build an image by `docker build -t gettingstarted .`
+2. run `docker run -p 8080:8080 gettingstarted`
+
+It will take a while because it needs to download all required jars.
+
 
 Then visit  http://localhost:8080/getzkup/ with your browser.
