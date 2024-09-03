@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>9.6.4-Eval</version>
+	<version>10.0.1.1</version>
 	<description>
 		# Project version follows the ZK version it depends.
 		# Release Procedure:
@@ -17,8 +17,8 @@
 		<spring.version>5.3.31</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<packaging>war</packaging>
 	<name>The Get ZK Up and Running Project</name>
@@ -30,15 +30,15 @@
 		</license>
 	</licenses>
 	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.zkoss.zk</groupId>
-				<artifactId>zk-bom</artifactId>
-				<version>${project.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
+<!--		<dependencies>-->
+<!--			<dependency>-->
+<!--				<groupId>org.zkoss.zk</groupId>-->
+<!--				<artifactId>zk-bom</artifactId>-->
+<!--				<version>${project.version}</version>-->
+<!--				<type>pom</type>-->
+<!--				<scope>import</scope>-->
+<!--			</dependency>-->
+<!--		</dependencies>-->
 	</dependencyManagement>
 	<repositories>
 		<repository>
@@ -67,18 +67,12 @@
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkbind</artifactId>
-<!--  the version depends on zk-bom -->
-<!--			<version>${project.version}</version>-->
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
 			<artifactId>zkplus</artifactId>
-<!--			<version>${project.version}</version>-->
-		</dependency>
-		<dependency>
-			<groupId>com.google.apis</groupId>
-			<artifactId>google-api-services-customsearch</artifactId>
-			<version>v1-rev54-1.22.0</version>
+			<version>${project.version}</version>
 		</dependency>
 		<!-- ZK previous default theme - breeze
 		<dependency>
@@ -109,7 +103,7 @@
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.53.v20231009</version>
+				<version>10.0.23</version>
 				<configuration>
 					<scanIntervalSeconds>5</scanIntervalSeconds>
 					<webAppConfig>
