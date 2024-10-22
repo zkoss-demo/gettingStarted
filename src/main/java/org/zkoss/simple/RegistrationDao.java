@@ -11,6 +11,6 @@ import org.springframework.stereotype.Repository;
 public class RegistrationDao {
 
 	public void add(User user){
-		
+		System.out.printf("User %s is added\n", user.getName());
 	}
 }
