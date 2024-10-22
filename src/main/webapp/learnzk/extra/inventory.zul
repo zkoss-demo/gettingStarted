@@ -36,8 +36,8 @@ style="padding-top:10px;padding-left:10px;">
 			</template>
 		</listbox>
 		<hbox visible="false">
-			Filter : 
-			<textbox id="filterBox" value="*" instant="true"/> 
+			Filter :
+			<textbox id="filterBox" value="*" instant="true"/>
 			<button id="searchButton" label="Search" />
 		</hbox>
 		<groupbox id="detailBox" visible="false" hflex="true" mold="3d">
@@ -52,11 +52,13 @@ style="padding-top:10px;padding-left:10px;">
 					<row>Description <textbox id="descriptionLabel" /></row>
 					<row>Cost <doublebox id="costLabel" format="$ ###,###,###,##0.00"/></row>
 					<row>Quantity <intbox id="quantityLabel" /></row>
-					<row spans="2" align="right">
-						<hlayout>
-							<button label="Save" image="/images/save.png"/>
-							<button label="Delete" image="/images/delete.png" />
-						</hlayout>
+					<row align="right">
+                        <cell colspan="2">
+                            <hlayout>
+                                <button label="Save" image="/images/save.png"/>
+                                <button label="Delete" image="/images/delete.png"/>
+                            </hlayout>
+                        </cell>
 					</row>
 				</rows>
 			</grid>

@@ -28,17 +28,21 @@
                     Birthday
                     <datebox id="birthdayBox" hflex="1" constraint="no empty, no today, no future"/>
                 </row>
-                <row spans="2" align="center">
-                    <hlayout>
-                        <checkbox id="acceptTermBox"/>
-                        Accept Term of Use
-                    </hlayout>
+                <row align="center">
+                    <cell colspan="2">
+                        <hlayout>
+                            <checkbox id="acceptTermBox"/>
+                            Accept Term of Use
+                        </hlayout>
+                    </cell>
                 </row>
-                <row spans="2" align="right">
-                    <hlayout>
-                        <button id="resetButton" label="Reset"/>
-                        <button id="submitButton" label="Submit" disabled="true"/>
-                    </hlayout>
+                <row align="right">
+                    <cell colspan="2">
+                        <hlayout>
+                            <button id="resetButton" label="Reset"/>
+                            <button id="submitButton" label="Submit" disabled="true"/>
+                        </hlayout>
+                    </cell>
                 </row>
             </rows>
         </grid>
