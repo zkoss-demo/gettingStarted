@@ -32,3 +32,7 @@ It will take a while because it needs to download all required jars.
 
 
 Then visit  http://localhost:8080/getzkup/ with your browser.
+
+# Make a WAR
+1. run `mvn clean package`
+2. get the WAR file at `target/getzkup.war`
