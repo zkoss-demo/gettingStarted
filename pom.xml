@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.zkoss.books</groupId>
 	<artifactId>getzkup</artifactId>
-	<version>10.0.1.1</version>
+	<version>10.1.0</version>
 	<description>
 		# Project version follows the ZK version it depends.
 		# Release Procedure:
