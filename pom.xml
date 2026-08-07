@@ -14,7 +14,7 @@
 		Because normally we only modify source code if it's deprecated or incompatible with current ZK version.
 	</description>
 	<properties>
-		<spring.version>5.3.31</spring.version>
+		<spring.version>6.1.14</spring.version>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-${maven.build.timestamp}</packname>
 		<maven.compiler.source>11</maven.compiler.source>
